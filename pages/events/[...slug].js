@@ -5,7 +5,7 @@ import ResultsTitle from "../../components/events/ResultTitle";
 import { Fragment } from "react";
 import Button from "../../components/ui/button";
 import ErrorAlert from "../../components/ui/error-alert";
-import { notFound } from "next/navigation";
+import useSWR from "swr";
 
 function FilteredEventPage({ hasError, date, filteredEvents, noData }) {
   if (hasError) {

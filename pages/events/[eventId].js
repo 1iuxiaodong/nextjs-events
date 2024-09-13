@@ -8,6 +8,7 @@ import EventSummary from "../../components/event-detail/EventSummary";
 import EventContent from "../../components/event-detail/EventContent";
 import EventLogistics from "../../components/event-detail/EventLogistics";
 import ErrorAlert from "../../components/ui/error-alert";
+import Comments from '../../components/input/comments'
 
 function EventDetailPage({ event }) {
   if (!event) {
@@ -30,6 +31,7 @@ function EventDetailPage({ event }) {
       <EventContent>
         <p>{event.description}</p>
       </EventContent>
+      <Comments eventId={event.id} />
     </Fragment>
   );
 }
